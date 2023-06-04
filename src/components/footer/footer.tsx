@@ -1,5 +1,5 @@
 import "./footer.scss";
 
 export default function Footer() {
-  return <h1>Footer component works!</h1>;
+  return <footer className="footer">footer component works!</footer>;
 }

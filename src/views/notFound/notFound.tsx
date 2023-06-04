@@ -1,5 +1,5 @@
-import './notFound.scss'
+import "./notFound.scss";
 
-export default function NotFound () {
-    return <h1>Not Found component works!</h1>
+export default function NotFound() {
+  return <main className={"notFound"}>notFound component works!</main>;
 }

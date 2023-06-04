@@ -1,3 +1,7 @@
+@use 'variables.scss' as vars;
+@use 'mixins.scss' as mixins;
+@use 'keyframes.scss' as keyframes;
+
 html,
 *,
 ::before,
@@ -6,4 +10,33 @@ html,
   padding: 0;
   box-sizing: border-box;
   font-family: 'Ubuntu', sans-serif;
+}
+
+section {
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+.dark {
+  @include mixins.darkTheme();
+}
+
+.light {
+  @include mixins.lightTheme();
+}
+
+header, footer {
+  min-height: 20vh;
+}
+main {
+  min-height: calc(100vh - 40vh);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

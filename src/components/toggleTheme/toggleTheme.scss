@@ -1,0 +1,56 @@
+@use "../../utils/styles/variables.scss" as vars;
+@use "../../utils/styles/mixins.scss" as mixins;
+@use "../../utils/styles/keyframes.scss" as keyframes;
+
+.toggleTheme {
+  margin-top: -2.5em;
+  position: relative;
+  width: 75px;
+}
+
+.toggleTheme__label {
+  position: absolute;
+  width: 100%;
+  height: 35px;
+  background-color: vars.$darkBackgroundColor;
+  border-radius: 50px;
+  cursor: pointer;
+  filter: drop-shadow(20px 10px 4px rgba(20,20,20,.2));
+  border: 4px solid vars.$primaryColor;
+}
+
+.toggleTheme__input {
+  position: absolute;
+  display: none;
+}
+
+.toggleTheme__slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.toggleTheme__input:checked ~ .toggleTheme__slider {
+  background-color: vars.$lightBackgroundColor;
+}
+
+.toggleTheme__slider::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 2px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  box-shadow: inset 6px 0px 0px 0px vars.$lightBackgroundColor;
+  background-color: vars.$darkBackgroundColor ;
+  transition: 0.3s;
+}
+
+.toggleTheme__input:checked ~ .toggleTheme__slider::before {
+  transform: translateX(48px);
+  background-color: vars.$darkBackgroundColor ;
+  box-shadow: none;
+}

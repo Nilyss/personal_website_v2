@@ -1,0 +1,11 @@
+@use "variables.scss" as vars;
+
+@mixin darkTheme() {
+  background: vars.$darkBackgroundColor;
+  color: vars.$lightTextColor;
+}
+
+@mixin lightTheme() {
+  background: vars.$lightBackgroundColor;
+  color: vars.$darkTextColor;
+}

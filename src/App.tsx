@@ -1,4 +1,4 @@
-import './utils/styles/_globalStyles.scss'
+import "./utils/styles/_globalStyles.scss";
 
 import {
   BrowserRouter as Router,
@@ -18,15 +18,15 @@ import NotFound from "./views/notFound/notFound";
 function App() {
   return (
     <>
-      <Header />
       <Router>
+        <Header />
         <Routes>
           <Route path={"/"} element={<Navigate to="/home" />} />
           <Route path={"/home"} element={<Home />} />
           <Route path={"*"} element={<NotFound />} />
         </Routes>
+        <Footer />
       </Router>
-      <Footer />
     </>
   );
 }

@@ -1,0 +1,84 @@
+@use "../../utils/styles/variables.scss" as vars;
+@use "../../utils/styles/mixins.scss" as mixins;
+@use "../../utils/styles/keyframes.scss" as keyframes;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid vars.$articleSeparator;
+}
+
+.brandingSection h1 {
+  color: vars.$primaryColor;
+  font-weight: 700;
+  font-size: 5em;
+}
+
+.header ul {
+  display: flex;
+  font-weight: 600;
+  font-size: 1.6em;
+}
+
+.navSection__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.navSection__wrapper__items a {
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+}
+
+.webAppLinks {
+  position: relative;
+  &:hover {
+    color: vars.$primaryColor;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 1.5em;
+      left: 70%;
+      transform: translateX(-50%);
+      height: 4px;
+      width: 90%;
+      background: vars.$primaryColor;
+    }
+  }
+}
+
+.networkLinks {
+  position: relative;
+  &:hover {
+    color: vars.$primaryColor;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 1.5em;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 4px;
+      width: 100%;
+      background: vars.$primaryColor;
+    }
+  }
+}
+
+.networkSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.networkSection__wrapper {
+  display: flex;
+  gap: .5em;
+  align-items: center;
+  margin-right: 1em;
+}
+
+.networkSection__wrapper__items {
+}
